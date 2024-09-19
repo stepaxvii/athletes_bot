@@ -1,6 +1,36 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
+def power_keyboard():
+    """Создание клавиатуры для отправки мотивационных фраз."""
+
+    keybord = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(
+                text='⚡️',
+                callback_data='power'
+            )]
+        ]
+    )
+    return keybord
+
+
+def done_or_not_keyboard():
+    """Создание клавиатуры подтверждения."""
+
+    keyboard = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(
+                text='✔️', callback_data='create_a_record'
+            )],
+            [InlineKeyboardButton(
+                text='✖️', callback_data='edits'
+            )],
+        ]
+    )
+    return keyboard
+
+
 def level_keyboard():
     """Создание клавиатуры с вариантами уровня."""
     keyboard = InlineKeyboardMarkup(
