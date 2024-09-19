@@ -158,7 +158,8 @@ async def process_notification_selection(
             notification_time='8:00'
         )
         await callback_query.message.answer(
-            text='Регистрация завершена без уведомлений.'
+            text='Регистрация завершена без уведомлений.',
+            reply_markup=power_keyboard()
         )
 
     elif selected_option == 'notification_yes':
